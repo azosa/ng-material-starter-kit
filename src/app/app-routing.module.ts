@@ -8,7 +8,7 @@ import { ProductsServiceModule } from './services/products.service-module';
 import { SortedProductsListComponentModule } from './components/sorted-products-list/sorted-products-list.component-module';
 
 @NgModule({
-  imports: [RouterModule.forRoot([{ path: 'products/:category', component: FilteredProductsListComponent }, { path: 'products', component: FilteredProductsListComponent }, { path: 'order', component: SortedProductsListComponent }]), FilteredProductsListComponentModule, CategoriesServiceModule, ProductsServiceModule, SortedProductsListComponentModule],
+  imports: [RouterModule.forRoot([{ path: 'products/:category', component: FilteredProductsListComponent }, { path: 'products', component: FilteredProductsListComponent }, { path: 'sorted-products', component: SortedProductsListComponent }]), FilteredProductsListComponentModule, CategoriesServiceModule, ProductsServiceModule, SortedProductsListComponentModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
