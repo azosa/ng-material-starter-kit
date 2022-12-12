@@ -14,6 +14,7 @@ export class ProductsListComponent {
   readonly list$: Observable<ProductModel[]> = this._productsService.getAll();
   private _refreshSubject: BehaviorSubject<void> = new BehaviorSubject<void>(void 0);
   public refresh$: Observable<void> = this._refreshSubject.asObservable();
+
   readonly refreshedList$: Observable<ProductModel[]> = this.refresh$.pipe(
     switchMap(data => this._productsService.getAll()));
 
